@@ -11,7 +11,7 @@ const res = {
 };
 
 jest.mock('pg-promise', () => () => () => ({
-    multi: jest.fn(() => jsonResponse),
+    multi: jest.fn(() => Promise.resolve(jsonResponse)),
 }));
 
 describe('Server', () => {
