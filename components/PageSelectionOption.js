@@ -1,9 +1,12 @@
+import Link from 'next/link';
 import React from 'react';
 
-let PageSelectionOption = ({dropdownOption}) => {
+export const PageSelectionOption = ({page, className}) => {
     return (
-        <option className='pageDropdown'>{dropdownOption}</option>
+        <li className={className}>
+            <Link href={page.name} type="button" aria-haspopup="page-selection">
+                {page.title}
+            </Link>
+        </li>
     )
 }
-
-export default PageSelectionOption;

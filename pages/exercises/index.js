@@ -1,11 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
+import {Button, PageSelectionDropdown, TestSelect} from './styles'
 
-import ExerciseList from '../components/ExerciseList'
-import { PageSelectionDropdown } from './exercises/styles'
-
+import { StyledExerciseList } from './styles'
 
 export default function Home() {
 
@@ -27,7 +26,18 @@ export default function Home() {
       </div> 
 
       <div>
-        <ExerciseList/>
+        <ul>
+          <TestSelect>Test Item 1</TestSelect>
+          <TestSelect>Test Item 2</TestSelect>
+        </ul>
+      </div>
+
+      <div>
+        <StyledExerciseList/>
+      </div>
+
+      <div>
+        <Button>A button</Button>
       </div>
 
       </main>

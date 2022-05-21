@@ -2,9 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import styles from '../styles/Home.module.css'
-import css from '@emotion/css'
+import {css, cx} from '@emotion/css'
 
-/*render(
+/*const color = 'white';
+
+render(
     <div
       className={css`
         background-color: hotpink;
@@ -21,7 +23,7 @@ const app = document.getElementById('root')
 const myStyle = css`
   color: rebeccapurple;
 `
-app.classList.add(myStyle)*/
+app.classList.add(myStyle) */
 
 export default function TestEmotion() {
     return (

@@ -1,23 +1,30 @@
 import React from 'react';
-import PageSelectionOption from './PageSelectionOption';
 
-let PageSelection = () => {
+//import PageSelectionOption from './PageSelectionOption';
+import { PageSelectionIndividual } from '../pages/exercises/styles';
 
-const pages = ['Workout Plans', 'Exercises', 'Other Options', 'New Option'];
-const pageOptions = [];
+const pageOptions = [
+    {
+        title: "Exercises",
+        name: "/exercises",
+    },
+    {
+        title: "Workout Plans",
+        name: "workoutPlans/workoutPlans",
+    },
+    {
+        title: "Other Options",
+        name: "/testEmotion",
+    }
+]
 
-for (let i = 0; i < pages.length; i++) {
-    pageOptions.push(
-        <PageSelectionOption dropdownOption = {pages[i]}/>
-    );
-    console.log(pageOptions);
+export const PageSelection = ({className}) => {
+   return (
+    <ul className={className + " pageOptions"}>
+        {pageOptions.map((page, index) => {
+            return <PageSelectionIndividual page={page} key={index}></PageSelectionIndividual>
+        }
+        )}
+    </ul>
+   ) 
 }
-
-    return (
-    <select className="pageDropdown">
-        {pageOptions}
-    </select>
-    )
-}
-
-export default PageSelection;

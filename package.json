@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@emotion/css": "^11.9.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
     "babel-plugin-import": "^1.13.3",
     "next": "12.1.0",
     "pg-promise": "^10.11.1",

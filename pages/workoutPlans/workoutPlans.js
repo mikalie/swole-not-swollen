@@ -1,13 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import React from 'react'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import React from 'react';
+import styles from '../../styles/Home.module.css'
 
-import ExerciseList from '../components/ExerciseList'
-import { PageSelectionDropdown } from './exercises/styles'
+import { WorkoutList } from '../../components/WorkoutList';
+import { PageSelectionDropdown } from '../exercises/styles';
 
-
-export default function Home() {
+export default function Workout() {
 
   return (
     <div className={styles.container}>
@@ -27,7 +26,7 @@ export default function Home() {
       </div> 
 
       <div>
-        <ExerciseList/>
+        <WorkoutList/>
       </div>
 
       </main>
