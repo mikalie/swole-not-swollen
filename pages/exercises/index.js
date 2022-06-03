@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import styles from '../../styles/Home.module.css'
-import {Button, PageSelectionDropdown, TestSelect} from './styles'
+import {Button, StyledPageSelection, TestSelect} from './styles'
 
 import { StyledExerciseList } from './styles'
 
@@ -22,7 +22,7 @@ export default function Home() {
         </h2>
 
       <div className='pageDropdown'>
-        <PageSelectionDropdown/>
+        <StyledPageSelection pageName="Exercises"/>
       </div> 
 
       <div>

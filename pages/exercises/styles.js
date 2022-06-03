@@ -11,7 +11,7 @@ export const TestSelect = styled.li`
     list-style-type: none;
 `
 
-export const PageSelectionDropdown = styled(PageSelection)`
+export const StyledPageSelection = styled(PageSelection)`
     list-style-type: none;
     border-radius: 5px;
 `
@@ -23,4 +23,8 @@ export const PageSelectionIndividual = styled(PageSelectionOption)`
 
 export const StyledExerciseList = styled(ExerciseList)`
     color: blue;
+`
+
+export const ListContainer = styled.li`
+    width: 150px;
 `

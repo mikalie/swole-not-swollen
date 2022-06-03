@@ -4,7 +4,7 @@ import React from 'react'
 import styles from '../styles/Home.module.css'
 
 import ExerciseList from '../components/ExerciseList'
-import { PageSelectionDropdown } from './exercises/styles'
+import { StyledPageSelection } from './exercises/styles'
 
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
         </h2>
 
       <div className='pageDropdown'>
-        <PageSelectionDropdown/>
+        <StyledPageSelection/>
       </div> 
 
       <div>

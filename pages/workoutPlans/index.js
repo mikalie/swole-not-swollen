@@ -4,7 +4,7 @@ import React from 'react';
 import styles from '../../styles/Home.module.css'
 
 import { WorkoutList } from '../../components/WorkoutList';
-import { PageSelectionDropdown } from '../exercises/styles';
+import { StyledPageSelection } from '../exercises/styles';
 
 export default function Workout() {
 
@@ -22,7 +22,7 @@ export default function Workout() {
         </h2>
 
       <div className='pageDropdown'>
-        <PageSelectionDropdown/>
+        <StyledPageSelection pageName="Workout Plans"/>
       </div> 
 
       <div>

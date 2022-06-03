@@ -17,7 +17,7 @@ a {
 }
 
 div.pageDropdown {
-  display: inline-block;
+  display: block;
   text-align: center;
   position: relative;
 }
@@ -25,6 +25,14 @@ div.pageDropdown {
 select.pageDropdown, option.pageDropdown {
   padding: 16px;
   margin: 24px;
+}
+
+.pageDropdown li {
+  display: none;
+}
+
+ul.pageDropdown:first-child {
+  display: block;
 }
 
 td.mainList {
@@ -39,3 +47,8 @@ td.mainList {
 tbody {
   padding: 0px;
 }
+
+.pageDropdown li.selected {
+  display: block;
+}
+
