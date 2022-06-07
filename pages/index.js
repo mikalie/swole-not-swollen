@@ -13,6 +13,7 @@ export default function Home() {
 
   const [open, setOpen] = useState(false);
   const node = useRef();
+  
   useOnClickOutside(node, () => setOpen(false));
 
   return (

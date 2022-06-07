@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import React, {useState, useRef} from 'react'
+import React, { useState, useRef } from 'react'
 import { useOnClickOutside } from '../../hooks'
 import styles from '../../styles/Home.module.css'
-import {Button, StyledPageSelection, TestSelect} from './styles'
+import {StyledPageSelection, TestSelect} from './styles'
 
 import { StyledExerciseList } from './styles'
 import Burger from '../../components/Burger'
@@ -26,7 +26,7 @@ export default function Home() {
 
       <main className={styles.main}>
 
-      <div>
+      <div ref={node}>
         <Burger open={open} setOpen={setOpen}/>
         <Menu open={open} setOpen={setOpen}/>
       </div>

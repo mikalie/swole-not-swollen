@@ -24,7 +24,7 @@ export default function TestEmotion() {
         
         <div>Test Emotion page</div>
 
-        <div>
+        <div ref={node}>
           <Burger open={open} setOpen={setOpen}/>
           <Menu open={open} setOpen={setOpen}/>
         </div>
