@@ -1,12 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import React from 'react'
+import React, {useState, useRef} from 'react'
+import { useOnClickOutside } from '../../hooks'
 import styles from '../../styles/Home.module.css'
 import {Button, StyledPageSelection, TestSelect} from './styles'
 
 import { StyledExerciseList } from './styles'
+import Burger from '../../components/Burger'
+import Menu from '../../components/Menu'
 
 export default function Home() {
+
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  
+  useOnClickOutside(node, () => setOpen(false));
 
   return (
     <div className={styles.container}>
@@ -17,8 +25,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+
+      <div>
+        <Burger open={open} setOpen={setOpen}/>
+        <Menu open={open} setOpen={setOpen}/>
+      </div>
+
         <h2 className={styles.title}>
-          Welcome to Swol Not Swollen, an app to organize your circus maintenance pursuits!
+          Welcome to Swole Not Swollen, an app to organize your circus maintenance pursuits!
         </h2>
 
       <div className='pageDropdown'>
@@ -34,10 +48,6 @@ export default function Home() {
 
       <div>
         <StyledExerciseList/>
-      </div>
-
-      <div>
-        <Button>A button</Button>
       </div>
 
       </main>

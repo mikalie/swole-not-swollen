@@ -1,12 +1,20 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import React from 'react';
-import styles from '../../styles/Home.module.css'
+import React, {useState, useRef} from 'react';
+import { useOnClickOutside } from '../../hooks';
+import styles from '../../styles/Home.module.css';
 
 import { WorkoutList } from '../../components/WorkoutList';
 import { StyledPageSelection } from '../exercises/styles';
+import Burger from '../../components/Burger';
+import Menu from '../../components/Menu';
 
 export default function Workout() {
+
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  
+  useOnClickOutside(node, () => setOpen(false));
 
   return (
     <div className={styles.container}>
@@ -17,6 +25,12 @@ export default function Workout() {
       </Head>
 
       <main className={styles.main}>
+
+      <div>
+        <Burger open={open} setOpen={setOpen}/>
+        <Menu open={open} setOpen={setOpen}/>
+      </div>
+
         <h2 className={styles.title}>
           Welcome to Swol Not Swollen, an app to organize your circus maintenance pursuits!
         </h2>
