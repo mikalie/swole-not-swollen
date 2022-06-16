@@ -8,13 +8,17 @@ import ExerciseList from '../components/ExerciseList'
 import { StyledPageSelection } from './exercises/styles'
 import Burger from '../components/Burger'
 import Menu from '../components/Menu'
+import SearchBar from '../components/Search/Search'
 
 export default function Home() {
 
   const [open, setOpen] = useState(false);
   const node = useRef();
-  
   useOnClickOutside(node, () => setOpen(false));
+
+
+  //const {search} = window.location;
+  //const query = new URLSearchParams(search).get(s);
 
   return (
     <div className={styles.container}>
@@ -38,6 +42,10 @@ export default function Home() {
       <div className='pageDropdown'>
         <StyledPageSelection/>
       </div> 
+
+      <div>
+        <SearchBar/>
+      </div>
 
       <div>
         <ExerciseList/>

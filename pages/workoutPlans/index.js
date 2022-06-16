@@ -4,7 +4,7 @@ import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../../hooks';
 import styles from '../../styles/Home.module.css';
 
-import { WorkoutList } from '../../components/WorkoutList';
+import { WorkoutList } from '../../components/WorkoutList/WorkoutList';
 import { StyledPageSelection } from '../exercises/styles';
 import Burger from '../../components/Burger';
 import Menu from '../../components/Menu';

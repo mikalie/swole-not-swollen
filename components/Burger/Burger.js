@@ -13,7 +13,6 @@ const Burger = ({open, setOpen}) => {
 
 Burger.propTypes = {
     open: Boolean.isRequired,
-    //setOpen: function.isRequired
 };
 
 export default Burger;

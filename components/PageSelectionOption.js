@@ -6,7 +6,7 @@ import { ListContainer } from '../pages/exercises/styles';
 export const PageSelectionOption = ({page, className}) => {
     const [dropdown, setDropdown] = useState(false);
     return (
-        <ListContainer className={className}>
+        <ListContainer className={className} onClick={() => {console.log("Page selection clicked!")}}>
             <Link href={page.name} type="button" aria-haspopup="page-selection">
                 {page.title}
             </Link>

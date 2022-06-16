@@ -23,8 +23,8 @@ div.pageDropdown {
 }
 
 select.pageDropdown, option.pageDropdown {
-  padding: 16px;
-  margin: 24px;
+  padding: 16;
+  margin: 24;
 }
 
 .pageDropdown li {
@@ -39,13 +39,7 @@ td.mainList {
   background-color: #ffffff;
   border-bottom-color: #61246e;
   border-bottom-style: solid;
-  padding: 0px;
-  padding-left: 56px;
-  padding-right: 56px;
-}
-
-tbody {
-  padding: 0px;
+  padding: 0 56;
 }
 
 .pageDropdown li.selected {
