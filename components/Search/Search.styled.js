@@ -8,4 +8,5 @@ export const StyledSearchSpan = styled.span `
     position: absolute;
     white-space: nowrap;
     width: 1px;
+    margin: 50 20;
 `

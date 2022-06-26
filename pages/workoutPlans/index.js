@@ -8,6 +8,7 @@ import { WorkoutList } from '../../components/WorkoutList/WorkoutList';
 import { StyledPageSelection } from '../exercises/styles';
 import Burger from '../../components/Burger';
 import Menu from '../../components/Menu';
+import SearchBar from '../../components/Search/Search';
 
 export default function Workout() {
 
@@ -38,6 +39,10 @@ export default function Workout() {
       <div className='pageDropdown'>
         <StyledPageSelection pageName="Workout Plans"/>
       </div> 
+
+      <div>
+        <SearchBar/>
+      </div>
 
       <div>
         <WorkoutList/>
